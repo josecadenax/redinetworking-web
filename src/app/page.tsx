@@ -49,6 +49,10 @@ export default function HomePage() {
       q: "¿Mis contactos y datos de clientes están seguros?",
       a: "Totalmente. Tu libreta de contactos es estrictamente privada y está aislada bajo encriptación en la nube. Jamás compartimos ni vendemos tu directorio a terceros.",
     },
+    {
+      q: "¿El precio del Plan Pro incluye IVA y emiten factura?",
+      a: "El costo base es de $199.00 MXN mensuales más el 16% de IVA ($230.84 MXN en total). Al realizar tu pago a través de Stripe puedes ingresar tu RFC y datos fiscales para recibir automáticamente tu factura electrónica (CFDI) deducible emitida por CELLAR TECHNOLOGIES MÉXICO, S.A.P.I. DE C.V.",
+    },
   ];
 
   return (
@@ -463,9 +467,17 @@ export default function HomePage() {
                   <p className="text-cyan-200/80 text-sm mt-1">Para empresarios activos y líderes de networking.</p>
                 </div>
 
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-extrabold text-white">$199</span>
-                  <span className="text-slate-300 text-sm font-medium">MXN / mes</span>
+                <div className="space-y-1">
+                  <div className="flex items-baseline gap-2 flex-wrap">
+                    <span className="text-4xl font-extrabold text-white">$199</span>
+                    <span className="text-slate-300 text-sm font-medium">MXN / mes</span>
+                    <span className="text-xs text-cyan-300 font-bold bg-cyan-950 border border-cyan-700/60 px-2 py-0.5 rounded-md">
+                      + IVA
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-400">
+                    $230.84 MXN con IVA incluido • Factura deducible (CFDI)
+                  </p>
                 </div>
 
                 <ul className="space-y-3 text-sm text-slate-200">

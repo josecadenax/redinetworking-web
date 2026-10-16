@@ -88,7 +88,7 @@ export default function TermsPage() {
             <li>
               <strong>Plan Redi Pro:</strong> Al superar la cuota gratuita o cuando el usuario lo solicite, puede activar el
               plan ilimitado por una suscripción mensual de{" "}
-              <strong className="text-cyan-300">$199.00 MXN (pesos mexicanos)</strong>, con renovación mensual automática.
+              <strong className="text-cyan-300">$199.00 MXN más 16% de IVA ($230.84 MXN total)</strong>, con renovación mensual automática y emisión de CFDI.
             </li>
             <li>
               <strong>Procesamiento Seguro:</strong> Los cobros se realizan mediante la pasarela segura{" "}
