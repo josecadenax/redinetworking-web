@@ -77,7 +77,7 @@ export default function PrivacyPage() {
             </li>
             <li>
               <strong>Notas de voz y mensajes de texto:</strong> Grabaciones de audio enviadas voluntariamente por el
-              usuario para transcribir y registrar cafés de negocios, reuniones o eventos de networking.
+              usuario para transcribir y registrar reuniones de negocios, acuerdos o eventos de networking.
             </li>
             <li>
               <strong>Datos de su Red de Contactos:</strong> Nombres, empresas, especialidades, acuerdos de seguimiento,

@@ -34,7 +34,7 @@ export default function HomePage() {
       a: "No. Redi funciona 100% dentro de WhatsApp. Solo das clic en el botón de comenzar, le envías un mensaje y listo, tu copiloto está activo al instante sin descargar nada ni crear contraseñas.",
     },
     {
-      q: "¿Cómo registro a una persona después de un café de negocios?",
+      q: "¿Cómo registro a una persona después de una reunión de negocios?",
       a: "Al salir de tu reunión, solo abre el chat de Redi y mándale una nota de voz rápida (por ejemplo: 'Acabo de desayunar con Carlos de CargoFast, hace importaciones y busca empresas de manufactura. Quedé de presentarle a mi primo el viernes'). Redi transcribe, extrae los datos y agenda el recordatorio automáticamente.",
     },
     {
@@ -136,7 +136,7 @@ export default function HomePage() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight sm:leading-none">
-              Convierte tus cafés de negocios en{" "}
+              Convierte tus reuniones de negocios en{" "}
               <span className="bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">
                 oportunidades reales.
               </span>
@@ -223,7 +223,7 @@ export default function HomePage() {
               <div className="flex justify-start">
                 <div className="bg-slate-800/90 border border-slate-700/60 text-slate-100 rounded-2xl rounded-tl-sm p-4 max-w-[90%] space-y-2 shadow">
                   <div className="font-bold text-cyan-300 text-xs">
-                    🤝 ¡Listo! Guardé el café con Carlos Mendoza
+                    🤝 ¡Listo! Guardé la reunión con Carlos Mendoza
                   </div>
                   <div className="text-xs space-y-1 text-slate-300">
                     <div>🏢 <strong>Empresa:</strong> CargoFast</div>
@@ -267,7 +267,7 @@ export default function HomePage() {
               <div className="text-3xl font-extrabold text-cyan-400 mb-2">80%</div>
               <h3 className="font-semibold text-white mb-1">De oportunidades perdidas</h3>
               <p className="text-sm text-slate-400">
-                La mayoría de empresarios olvidan dar seguimiento después de un evento o café de negocios por falta de tiempo.
+                La mayoría de empresarios olvidan dar seguimiento después de un evento o reunión de negocios por falta de tiempo.
               </p>
             </div>
 
