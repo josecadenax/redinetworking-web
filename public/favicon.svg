@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070c1e" />
+      <stop offset="100%" stop-color="#02040b" />
+    </linearGradient>
+
+    <!-- R Primary Neon Gradient (Cyan -> Teal -> Purple) -->
+    <linearGradient id="rGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="45%" stop-color="#00b4d8" />
+      <stop offset="75%" stop-color="#7209b7" />
+      <stop offset="100%" stop-color="#b5179e" />
+    </linearGradient>
+
+    <linearGradient id="legGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b4d8" />
+      <stop offset="60%" stop-color="#7209b7" />
+      <stop offset="100%" stop-color="#f72585" />
+    </linearGradient>
+
+    <!-- Node Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Dark Rounded App Icon Container -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="#00f5d4" stroke-opacity="0.15" stroke-width="6" />
+
+  <!-- The "R" Main Structural Lines (Bold, thick, unmistakably an "R") -->
+  <g stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <!-- Vertical Left Spine -->
+    <line x1="150" y1="110" x2="150" y2="402" stroke="#00f5d4" stroke-width="42" />
+
+    <!-- Top Horizontal Bar -->
+    <line x1="150" y1="110" x2="280" y2="110" stroke="#00f5d4" stroke-width="42" />
+
+    <!-- Outer Loop Curve (Arc of R) -->
+    <path d="M 270 110 C 375 110, 375 255, 270 255" fill="none" stroke="url(#rGrad)" stroke-width="42" />
+
+    <!-- Middle Horizontal Bar -->
+    <line x1="150" y1="255" x2="280" y2="255" stroke="#00b4d8" stroke-width="42" />
+
+    <!-- Diagonal Dynamic Leg -->
+    <line x1="240" y1="250" x2="355" y2="402" stroke="url(#legGrad)" stroke-width="42" />
+
+    <!-- Subtle Neural Network Cross-Lines (constellation feel) -->
+    <line x1="150" y1="255" x2="280" y2="110" stroke="#00f5d4" stroke-opacity="0.5" stroke-width="14" />
+    <line x1="150" y1="110" x2="330" y2="182" stroke="#00b4d8" stroke-opacity="0.5" stroke-width="14" />
+    <line x1="150" y1="402" x2="250" y2="255" stroke="#00b4d8" stroke-opacity="0.5" stroke-width="14" />
+  </g>
+
+  <!-- Constellation Nodes (Bright glowing circular network junctions) -->
+  <g filter="url(#glow)">
+    <!-- Spine Top Node -->
+    <circle cx="150" cy="110" r="28" fill="#020617" stroke="#00f5d4" stroke-width="14" />
+    <circle cx="150" cy="110" r="12" fill="#ffffff" />
+
+    <!-- Spine Mid Node -->
+    <circle cx="150" cy="255" r="28" fill="#020617" stroke="#00f5d4" stroke-width="14" />
+    <circle cx="150" cy="255" r="12" fill="#ffffff" />
+
+    <!-- Spine Bottom Node -->
+    <circle cx="150" cy="402" r="28" fill="#020617" stroke="#00f5d4" stroke-width="14" />
+    <circle cx="150" cy="402" r="12" fill="#ffffff" />
+
+    <!-- Loop Apex Node -->
+    <circle cx="280" cy="110" r="24" fill="#020617" stroke="#00d2ff" stroke-width="12" />
+    <circle cx="280" cy="110" r="10" fill="#ffffff" />
+
+    <!-- Outer Loop Peak Node -->
+    <circle cx="340" cy="182" r="26" fill="#020617" stroke="#9d4edd" stroke-width="12" />
+    <circle cx="340" cy="182" r="10" fill="#ffffff" />
+
+    <!-- Mid Loop Joint Node -->
+    <circle cx="270" cy="255" r="26" fill="#020617" stroke="#7209b7" stroke-width="12" />
+    <circle cx="270" cy="255" r="10" fill="#ffffff" />
+
+    <!-- Diagonal Leg Tip Node -->
+    <circle cx="355" cy="402" r="28" fill="#020617" stroke="#f72585" stroke-width="14" />
+    <circle cx="355" cy="402" r="12" fill="#ffffff" />
+  </g>
+</svg>
