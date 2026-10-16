@@ -62,6 +62,10 @@ export default function HomePage() {
       a: "Tus contactos, notas y acuerdos jamás se borran ni se pierden. Al cancelar, mantienes todos los beneficios de Redi Pro hasta que termine tu periodo de 30 días ya pagado. Al concluir el ciclo, tu cuenta pasa automáticamente al plan básico gratuito y tu información continúa segura y accesible en tu libreta.",
     },
     {
+      q: "¿Qué pasa si ya tenía más de 20 contactos guardados y cancelo el Plan Pro?",
+      a: "Absolutamente ninguno de tus contactos se borra ni se bloquea. Si acumulaste 50, 100 o más contactos durante tu suscripción, todos permanecen 100% seguros en tu cuenta. Podrás seguir buscándolos ('¿quién sabe de logística?', '¿cuál es el teléfono de Carlos?'), consultar acuerdos pasados y enriquecer notas de tus contactos existentes sin costo alguno. Lo único que se pausa es la posibilidad de registrar contactos nuevos adicionales hasta que decidas reactivar Redi Pro.",
+    },
+    {
       q: "¿Hay contratos de permanencia o plazos forzosos?",
       a: "Ninguno. Redi Pro es un servicio mensual libre. Puedes probarlo el tiempo que lo necesites para tus reuniones y pausar o cancelar cuando lo decidas sin ninguna penalización.",
     },
