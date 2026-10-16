@@ -589,16 +589,19 @@ export default function HomePage() {
               <Image src="/images/logo.jpg" alt="Logo" fill className="object-cover" />
             </div>
             <div>
-              <span className="font-bold text-white">Redi Networking</span> © {new Date().getFullYear()} Cellar Technologies. Todos los derechos reservados.
+              <span className="font-bold text-white">Redi Networking</span> © {new Date().getFullYear()} CELLAR TECHNOLOGIES MÉXICO, S.A.P.I. DE C.V. Todos los derechos reservados.
             </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-6">
-            <a href={WHATSAPP_URL} className="hover:text-cyan-400 transition-colors">
+            <Link href="/privacidad" className="hover:text-cyan-400 transition-colors">
+              Aviso de Privacidad
+            </Link>
+            <Link href="/terminos" className="hover:text-cyan-400 transition-colors">
+              Términos de Servicio
+            </Link>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
               Contacto (+1 978 350 0663)
-            </a>
-            <a href="https://redinetworking.com" className="hover:text-cyan-400 transition-colors">
-              redinetworking.com
             </a>
           </div>
         </div>
