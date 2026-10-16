@@ -53,6 +53,18 @@ export default function HomePage() {
       q: "¿El precio del Plan Pro incluye IVA y emiten factura?",
       a: "El costo base es de $199.00 MXN mensuales más el 16% de IVA ($230.84 MXN en total). Al realizar tu pago a través de Stripe puedes ingresar tu RFC y datos fiscales para recibir automáticamente tu factura electrónica (CFDI) deducible emitida por CELLAR TECHNOLOGIES MÉXICO, S.A.P.I. DE C.V.",
     },
+    {
+      q: "¿Cómo cancelo mi suscripción mensual si ya no la necesito?",
+      a: "Puedes cancelar en cualquier momento de forma 100% autoservicio y en 1 solo clic. Solo escríbele a Redi en WhatsApp 'cancelar suscripción' para recibir tu enlace privado de autoservicio de Stripe, o haz clic en 'Administrar suscripción' desde el recibo que Stripe envía a tu correo cada mes. No necesitas hablar con ejecutivos, no hay letras chiquitas ni trámites engorrosos.",
+    },
+    {
+      q: "¿Qué sucede con mis contactos guardados si decido cancelar?",
+      a: "Tus contactos, notas y acuerdos jamás se borran ni se pierden. Al cancelar, mantienes todos los beneficios de Redi Pro hasta que termine tu periodo de 30 días ya pagado. Al concluir el ciclo, tu cuenta pasa automáticamente al plan básico gratuito y tu información continúa segura y accesible en tu libreta.",
+    },
+    {
+      q: "¿Hay contratos de permanencia o plazos forzosos?",
+      a: "Ninguno. Redi Pro es un servicio mensual libre. Puedes probarlo el tiempo que lo necesites para tus reuniones y pausar o cancelar cuando lo decidas sin ninguna penalización.",
+    },
   ];
 
   return (
@@ -518,6 +530,9 @@ export default function HomePage() {
                   <span>Comenzar Ahora en WhatsApp</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
+                <p className="text-[11px] text-center text-slate-400 mt-2.5">
+                  Sin plazos forzosos • Cancela cuando quieras en 1 clic
+                </p>
               </div>
             </div>
           </div>

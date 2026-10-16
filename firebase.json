@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "redinetworking-app",
     "public": "out",
     "ignore": [
       "firebase.json",
