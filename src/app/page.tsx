@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { trackEvent } from "@/lib/gtag";
+import { trackFirebaseEvent } from "@/lib/firebase";
 import {
   MessageSquare,
   Mic,
@@ -115,7 +115,7 @@ export default function HomePage() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackEvent("click_whatsapp_cta", { location: "navbar" })}
+              onClick={() => trackFirebaseEvent("click_whatsapp_cta", { location: "navbar" })}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold px-4 sm:px-5 py-2.5 rounded-full text-sm shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all transform hover:-translate-y-0.5"
             >
               <MessageSquare className="w-4 h-4 fill-current" />
@@ -153,7 +153,7 @@ export default function HomePage() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackEvent("click_whatsapp_cta", { location: "hero" })}
+                onClick={() => trackFirebaseEvent("click_whatsapp_cta", { location: "hero" })}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold px-8 py-4 rounded-full text-base shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all transform hover:-translate-y-0.5"
               >
                 <MessageSquare className="w-5 h-5 fill-current" />
@@ -467,7 +467,7 @@ export default function HomePage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackEvent("click_whatsapp_cta", { location: "pricing_free" })}
+                  onClick={() => trackFirebaseEvent("click_whatsapp_cta", { location: "pricing_free" })}
                   className="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 rounded-full text-sm border border-slate-700 transition-all"
                 >
                   <span>Probar Gratis</span>
@@ -533,7 +533,7 @@ export default function HomePage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackEvent("click_whatsapp_cta", { location: "pricing_pro" })}
+                  onClick={() => trackFirebaseEvent("click_whatsapp_cta", { location: "pricing_pro" })}
                   className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 text-slate-950 font-extrabold py-3.5 rounded-full text-sm shadow-lg shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5"
                 >
                   <span>Comenzar Ahora en WhatsApp</span>
@@ -606,7 +606,7 @@ export default function HomePage() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackEvent("click_whatsapp_cta", { location: "cta_banner" })}
+              onClick={() => trackFirebaseEvent("click_whatsapp_cta", { location: "cta_banner" })}
               className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold px-9 py-4 rounded-full text-base sm:text-lg shadow-xl shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all transform hover:-translate-y-0.5"
             >
               <MessageSquare className="w-5 h-5 fill-current" />
@@ -641,7 +641,7 @@ export default function HomePage() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackEvent("click_whatsapp_cta", { location: "footer" })}
+              onClick={() => trackFirebaseEvent("click_whatsapp_cta", { location: "footer" })}
               className="hover:text-cyan-400 transition-colors"
             >
               Contacto (+1 978 350 0663)

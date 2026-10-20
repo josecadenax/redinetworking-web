@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { FirebaseAnalytics } from "@/components/firebase-analytics";
 
 export const metadata: Metadata = {
   title: "Redi Networking | Tu Copiloto con IA en WhatsApp",
@@ -61,12 +61,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-
   return (
     <html lang="es" className="scroll-smooth">
       <body className="bg-slate-950 text-slate-100 antialiased font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
-        <GoogleAnalytics gaId={gaId} />
+        <FirebaseAnalytics />
         {children}
       </body>
     </html>
