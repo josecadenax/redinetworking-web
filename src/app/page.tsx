@@ -26,7 +26,14 @@ export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
+    const isOpening = openFaq !== index;
+    setOpenFaq(isOpening ? index : null);
+    if (isOpening) {
+      trackFirebaseEvent("faq_toggle", {
+        question_index: index,
+        question: faqs[index].q,
+      });
+    }
   };
 
   const faqs = [
@@ -96,16 +103,32 @@ export default function HomePage() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-            <a href="#como-funciona" className="hover:text-cyan-400 transition-colors">
+            <a
+              href="#como-funciona"
+              onClick={() => trackFirebaseEvent("nav_click", { target: "como-funciona" })}
+              className="hover:text-cyan-400 transition-colors"
+            >
               Cómo funciona
             </a>
-            <a href="#caracteristicas" className="hover:text-cyan-400 transition-colors">
+            <a
+              href="#caracteristicas"
+              onClick={() => trackFirebaseEvent("nav_click", { target: "caracteristicas" })}
+              className="hover:text-cyan-400 transition-colors"
+            >
               Características
             </a>
-            <a href="#precios" className="hover:text-cyan-400 transition-colors">
+            <a
+              href="#precios"
+              onClick={() => trackFirebaseEvent("nav_click", { target: "precios" })}
+              className="hover:text-cyan-400 transition-colors"
+            >
               Precios
             </a>
-            <a href="#faq" className="hover:text-cyan-400 transition-colors">
+            <a
+              href="#faq"
+              onClick={() => trackFirebaseEvent("nav_click", { target: "faq" })}
+              className="hover:text-cyan-400 transition-colors"
+            >
               Preguntas
             </a>
           </nav>
@@ -467,7 +490,10 @@ export default function HomePage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackFirebaseEvent("click_whatsapp_cta", { location: "pricing_free" })}
+                  onClick={() => {
+                    trackFirebaseEvent("click_whatsapp_cta", { location: "pricing_free", plan: "free" });
+                    trackFirebaseEvent("select_plan", { plan_name: "free", price: 0, currency: "MXN" });
+                  }}
                   className="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 rounded-full text-sm border border-slate-700 transition-all"
                 >
                   <span>Probar Gratis</span>
@@ -533,7 +559,10 @@ export default function HomePage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackFirebaseEvent("click_whatsapp_cta", { location: "pricing_pro" })}
+                  onClick={() => {
+                    trackFirebaseEvent("click_whatsapp_cta", { location: "pricing_pro", plan: "pro" });
+                    trackFirebaseEvent("select_plan", { plan_name: "pro", price: 199, currency: "MXN" });
+                  }}
                   className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 text-slate-950 font-extrabold py-3.5 rounded-full text-sm shadow-lg shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5"
                 >
                   <span>Comenzar Ahora en WhatsApp</span>
@@ -631,10 +660,18 @@ export default function HomePage() {
           </div>
 
           <div className="flex flex-wrap items-center gap-6">
-            <Link href="/privacidad" className="hover:text-cyan-400 transition-colors">
+            <Link
+              href="/privacidad"
+              onClick={() => trackFirebaseEvent("legal_link_click", { target: "/privacidad" })}
+              className="hover:text-cyan-400 transition-colors"
+            >
               Aviso de Privacidad
             </Link>
-            <Link href="/terminos" className="hover:text-cyan-400 transition-colors">
+            <Link
+              href="/terminos"
+              onClick={() => trackFirebaseEvent("legal_link_click", { target: "/terminos" })}
+              className="hover:text-cyan-400 transition-colors"
+            >
               Términos de Servicio
             </Link>
             <a

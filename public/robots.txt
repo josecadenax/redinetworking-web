@@ -1,0 +1,6 @@
+# Robots.txt for Redi Networking
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://redinetworking.com/sitemap.xml
