@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { FirebaseAnalytics } from "@/components/firebase-analytics";
-import { JsonLd } from "@/components/json-ld";
 
 export const viewport: Viewport = {
   themeColor: "#060d1a",
@@ -35,8 +34,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://redinetworking.com",
     languages: {
-      "es-MX": "https://redinetworking.com",
       "es": "https://redinetworking.com",
+      "es-MX": "https://redinetworking.com",
+      "en": "https://redinetworking.com/en",
+      "x-default": "https://redinetworking.com",
     },
   },
   robots: {
@@ -53,6 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_MX",
+    alternateLocale: ["en_US"],
     url: "https://redinetworking.com",
     siteName: "Redi Networking",
     title: "Redi Networking | Tu Copiloto con IA en WhatsApp",
@@ -99,7 +101,6 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className="bg-slate-950 text-slate-100 antialiased font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
-        <JsonLd />
         <FirebaseAnalytics />
         {children}
       </body>
